@@ -2,7 +2,7 @@
   <div id="app">
     <ul class="first">
       <h1>Cart list</h1>
-      <li v-for="item in products" :key="item.id" class="box">
+      <li v-for="item in products" :key="item.id" class="box" @click="cart(item.id)">
         <img class="img" :src="item.sources" />
         <b>{{ item.name }}</b>
 
@@ -13,7 +13,7 @@
             </li>
             <li class="d">Rs {{ price2 }}</li>
           </ul>
-          <button @click="cart(2)" class="quality">Qty</button>
+          <!-- <button @click="cart(2)" class="quality">Qty</button> -->
         </div>
         <div v-else>
           <ul>
@@ -22,7 +22,7 @@
             </li>
             <li class="d">Rs {{ price1 }}</li>
           </ul>
-          <button @click="cart(1)" class="quality">Qty</button>
+          <!-- <button @click="cart(1)" class="quality">Qty</button> -->
         </div>
       </li>
     </ul>
